@@ -25,8 +25,9 @@ const Header = () => {
             </li>
             <li>
                 <button onClick={logoutHandler} className="logout-btn">
-                Logout
-                </button>{" "}
+                    Logout
+                </button>
+                {" "}
             </li>
             </ul>
         </nav>
