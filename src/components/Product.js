@@ -6,11 +6,13 @@ import "./Product.css";
 const Product = ({ name, id, imgURL, price }) => {
     const dispatch = useDispatch();
     const addToCart = () => {
-        dispatch(cartActions.addToCart({
-            name,
-            id,
-            price,
-        }));
+        dispatch(
+            cartActions.addToCart({
+                name,
+                id,
+                price,
+            })
+        );
     };
     return (
         <div className="card">
