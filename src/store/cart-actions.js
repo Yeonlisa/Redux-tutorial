@@ -12,7 +12,6 @@ export const fetchData = () => {
         };
         try {
             const cartData = await fetchHandler();
-            console.log(cartData);
             dispatch(cartActions.replaceData(cartData));
         } catch (err) {
             dispatch(
@@ -49,9 +48,9 @@ export const sendCartData = (cart) => {
         // Send state as Request is successful
             dispatch(
                 uiActions.showNotification({
-                open: true,
-                message: "Request Sent Successfully!!",
-                type: "success",
+                    open: true,
+                    message: "Request Sent Successfully!!",
+                    type: "success",
                 })
             );
         };
