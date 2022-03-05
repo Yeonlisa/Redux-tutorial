@@ -11,17 +11,17 @@ export const fetchData = () => {
         return data;
         };
         try {
-        const cartData = await fetchHandler();
-        console.log(cartData);
-        dispatch(cartActions.replaceData(cartData));
+            const cartData = await fetchHandler();
+            console.log(cartData);
+            dispatch(cartActions.replaceData(cartData));
         } catch (err) {
-        dispatch(
-            uiActions.showNotification({
-            open: true,
-            message: "Sending Request Failed",
-            type: "error",
-            })
-        );
+            dispatch(
+                uiActions.showNotification({
+                open: true,
+                message: "Sending Request Failed",
+                type: "error",
+                })
+            );
         }
     };
     };
